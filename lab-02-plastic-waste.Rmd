@@ -166,7 +166,7 @@ This still doesn't look great...
 
 1.  Recreate the density plots above using a different (lower) alpha level that works better for displaying the density curves for all continents.
 
-```{r plastic_waste_density_capita, echo=TRUE}
+```{r plastic_waste_density_capita, eval=TRUE}
 ggplot(data = plastic_waste, 
        mapping = aes(x = plastic_waste_per_cap, 
                      color = continent, 
