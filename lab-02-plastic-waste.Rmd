@@ -1,14 +1,17 @@
 ---
 title: "Lab 02 - Global plastic waste"
 output: 
-  tufte::tufte_html:
-    tufte_variant: "envisioned"
-    highlight: pygments
-    css: ../lab.css
-link-citations: true
+  pdf_document: 
+    latex_engine: xelatex
+    toc: true
+    number_sections: true
+    fig_caption: true
+    keep_tex: true
+  link-citations: true
 editor_options: 
   chunk_output_type: inline
 ---
+
 
 ```{r include = FALSE}
 knitr::opts_chunk$set(eval = FALSE)
