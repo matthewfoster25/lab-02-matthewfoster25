@@ -278,6 +278,8 @@ If you haven't had time to finish the exercises above, please ask for help befor
 
 1.  Recreate the following plot, and interpret what you see in context of the data.
 
+Answer: The following plot shows the average plastic waste per capita vs. coastal population proportion. Countries with a coastal population proportion less than 0.5 produce roughly 0.14 plastic waste per capita. Countries with a coastal population proportion between 0.5 and 1.0 produce roughly 0.21 plastic waste per capita. Finally. countries with a coastal population proportion greater than 1.0 produce roughly 0.2 plastic waste per capita.
+
 ```{r echo=FALSE, message=FALSE, eval=TRUE, warning=FALSE}
 plastic_waste %>% 
   mutate(coastal_pop_prop = coastal_pop / total_pop) %>%
