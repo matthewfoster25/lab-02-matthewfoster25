@@ -204,6 +204,21 @@ ggplot(data = plastic_waste,
 
 1.  Visualize the relationship between plastic waste per capita and mismanaged plastic waste per capita using a scatterplot.
     Describe the relationship.
+    
+Answer: 
+    
+```{r plastic_waste_and_mismanaged_plastic_waste-per-cap, eval=TRUE}
+
+ggplot(data = plastic_waste, 
+       aes(x = plastic_waste_per_cap, y = mismanaged_plastic_waste_per_cap, color = continent)) +
+  geom_point() +
+  labs(
+    title = "Relationship between Plastic Waste Per Capita and Mismanaged Plastic Waste Per Capita",
+    x = "Plastic Waste Per Capita",
+    y = "Mismanaged Plastic Waste Per Capita",
+    color = "Continent"
+  )
+```
 
 2.  Colour the points in the scatterplot by continent.
     Does there seem to be any clear distinctions between continents with respect to how plastic waste per capita and mismanaged plastic waste per capita are associated?
