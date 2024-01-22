@@ -205,7 +205,7 @@ ggplot(data = plastic_waste,
 1.  Visualize the relationship between plastic waste per capita and mismanaged plastic waste per capita using a scatterplot.
     Describe the relationship.
     
-Answer: 
+Answer: The relationship presented between plastic waste per capita and mismanaged plastic waste percapita shows that as country's plastic waste per capita increases, their mismanaged plastic waste per capita also increases.
     
 ```{r plastic_waste_and_mismanaged_plastic_waste-per-cap, eval=TRUE}
 
@@ -222,10 +222,45 @@ ggplot(data = plastic_waste,
 
 2.  Colour the points in the scatterplot by continent.
     Does there seem to be any clear distinctions between continents with respect to how plastic waste per capita and mismanaged plastic waste per capita are associated?
+    
+Answer: The colored graph represents how Europe and North America (with the exception of one point) seem to have the lowest rates of waste per capita. While, Oceania and Asia have the highest rates of mismanaged plastic waste per capita. South America and Africa appear to be the middlemarkers of the continents.
 
 3.  Visualize the relationship between plastic waste per capita and total population as well as plastic waste per capita and coastal population.
     You will need to make two separate plots.
-    Do either of these pairs of variables appear to be more strongly linearly associated?
+    
+Do either of these pairs of variables appear to be more strongly linearly associated?
+
+Answer: For the Plastic Waste Per Capita and Total Population, every continent is very linear except for Europe and Africa. Both these continents plots come together to form a triangular shape.
+
+For the Plastic Waste Per Capita and Coastal Population the same can be seen for every continent except Asia. The Asian Coastal Population similarly forms a triangle to Africa and Europe (albeit a much taller triangle).
+    
+``` {r plastic_waste_per_capita_plus_total_population, eval=TRUE}
+
+ggplot(data = plastic_waste, 
+       aes(x = plastic_waste_per_cap, y = total_pop, color = continent)) +
+  geom_point(alpha = 0.5) +  # Adjust alpha level here
+  labs(
+    title = "Relationship between Plastic Waste Per Capita and Total Population",
+    x = "Plastic Waste Per Capita",
+    y = "Total Population",
+    color = "Continent"
+  )
+
+```
+
+``` {r plastic_waste_per_capita_plus_coastal_population, eval=TRUE}
+
+ggplot(data = plastic_waste, 
+       aes(x = plastic_waste_per_cap, y = coastal_pop, color = continent)) +
+  geom_point(alpha = 0.5) +
+  labs(
+    title = "Relationship between Plastic Waste Per Capita and Coastal Population",
+    x = "Plastic Waste Per Capita",
+    y = "Coastal Population",
+    color = "Continent"
+  )
+
+```
 
 🧶 ✅ ⬆️ *Now is another good time to knit your document and commit and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
